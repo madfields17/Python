@@ -1,3 +1,6 @@
+# I wrote this code in Python to make a music player with some of my own music! I broke down some of the steps throughout the code.
+
+
 import tkinter as tk
 import fnmatch
 import os
@@ -27,7 +30,7 @@ def select():
     mixer.music.load(rootpath + "//" + listBox.get("anchor"))
     mixer.music.play()
 
-# Stop and unselect after unstopping
+# Create action to stop and unselect after unstopping
 
 
 def stop():
@@ -50,7 +53,7 @@ def play_next():
     listBox.activate(next_song)
     listBox.select_set(next_song)
 
-# select to play previous song
+# create action to select to play previous song
 
 
 def play_prev():
@@ -77,7 +80,7 @@ def pause_song():
         mixer.music.unpause()
         pauseButton["text"] = "Pause"
 
-
+# Format the music player
 listBox = tk.Listbox(canvas, fg="cyan", bg="black", width=100, font=('ds-script', 18))
 listBox.pack(padx=15, pady=15)
 
@@ -86,6 +89,8 @@ label.pack(pady=15)
 
 top = tk.Frame(canvas, bg="black")
 top.pack(padx=10, pady=5, anchor='center')
+
+#Format the buttons and assign actions
 
 stopButton = tk.Button(canvas, text="Stop", image= stop_img, bg="black", borderwidth=0, command= stop)
 stopButton.pack(pady=15, in_=top, side='left')
