@@ -1,3 +1,5 @@
+#In this Python code, I created a slot machine that allows a person to deposit money, bet money, play, and quit if they'd like to. It queries the participant through this process.
+
 import random
 
 MAX_LINES = 3
